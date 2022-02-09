@@ -14,7 +14,7 @@ public class DataLoader {
         this.coffeeRepository = coffeeRepository;
     }
 
-    @PostConstruct
+    @PostConstruct//вынесли базовое заполнение базы в отдельный блок
     public void loadData() {
         coffeeRepository.saveAll(List.of(
                 new Coffee("Coffee Lorenzo"),
